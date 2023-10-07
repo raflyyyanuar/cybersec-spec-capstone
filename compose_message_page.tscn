@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://db4w0jcqt01ts"]
+
+[ext_resource type="LabelSettings" uid="uid://bfaimiwcnjr7w" path="res://title_label.tres" id="1_ysh0u"]
+
+[node name="ComposeMessagePage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -612.0
+offset_right = 612.0
+offset_bottom = 140.0
+grow_horizontal = 2
+text = "Compose a New Message"
+label_settings = ExtResource("1_ysh0u")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 68.0
+offset_top = 146.0
+offset_right = 108.0
+offset_bottom = 169.0
+text = "From:"
+
+[node name="FromLineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 146.0
+offset_right = 164.0
+offset_bottom = 172.0
+text = "Who"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 68.0
+offset_top = 197.0
+offset_right = 113.0
+offset_bottom = 223.0
+text = "Content:"
+
+[node name="ContentTextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 197.0
+offset_right = 650.0
+offset_bottom = 366.0
+text = "What"

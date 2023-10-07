@@ -1,0 +1,112 @@
+[gd_scene load_steps=3 format=3 uid="uid://crc3iscrvwndi"]
+
+[ext_resource type="Script" path="res://register_page.gd" id="1_fwuug"]
+[ext_resource type="LabelSettings" uid="uid://bfaimiwcnjr7w" path="res://title_label.tres" id="1_s1oaa"]
+
+[node name="RegisterPage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fwuug")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -197.5
+offset_right = 197.5
+offset_bottom = 140.0
+grow_horizontal = 2
+text = "Register"
+label_settings = ExtResource("1_s1oaa")
+
+[node name="InputUsername" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 645.0
+offset_top = 207.0
+offset_right = 892.0
+offset_bottom = 238.0
+placeholder_text = "Enter your username..."
+
+[node name="InputPassword" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 645.0
+offset_top = 258.0
+offset_right = 892.0
+offset_bottom = 289.0
+placeholder_text = "Enter your password..."
+secret = true
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 547.0
+offset_top = 211.0
+offset_right = 627.0
+offset_bottom = 237.0
+text = "Username"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 548.0
+offset_top = 258.0
+offset_right = 628.0
+offset_bottom = 284.0
+text = "Password"
+
+[node name="LettersRequirement" type="Label" parent="."]
+layout_mode = 0
+offset_left = 647.0
+offset_top = 306.0
+offset_right = 702.0
+offset_bottom = 332.0
+text = "At least 1 uppercase letter"
+
+[node name="NumberRequirement" type="Label" parent="."]
+layout_mode = 0
+offset_left = 647.0
+offset_top = 327.0
+offset_right = 702.0
+offset_bottom = 353.0
+text = "At least 1 number"
+
+[node name="SymbolRequirement" type="Label" parent="."]
+layout_mode = 0
+offset_left = 647.0
+offset_top = 348.0
+offset_right = 719.0
+offset_bottom = 374.0
+text = "At least 1 symbol"
+
+[node name="LengthRequirement" type="Label" parent="."]
+layout_mode = 0
+offset_left = 647.0
+offset_top = 371.0
+offset_right = 719.0
+offset_bottom = 397.0
+text = "At least 8 characters"
+
+[node name="Register" type="Button" parent="."]
+layout_mode = 0
+offset_left = 656.0
+offset_top = 410.0
+offset_right = 728.0
+offset_bottom = 441.0
+text = "Register"
+
+[node name="Home" type="Button" parent="."]
+layout_mode = 0
+offset_left = 656.0
+offset_top = 452.0
+offset_right = 728.0
+offset_bottom = 483.0
+text = "Home"
+
+[connection signal="text_submitted" from="InputUsername" to="." method="_on_input_username_text_submitted"]
+[connection signal="text_changed" from="InputPassword" to="." method="_on_input_password_text_changed"]
+[connection signal="text_submitted" from="InputPassword" to="." method="_on_input_password_text_submitted"]
+[connection signal="pressed" from="Register" to="." method="_on_register_pressed"]
+[connection signal="pressed" from="Home" to="." method="_on_home_pressed"]
