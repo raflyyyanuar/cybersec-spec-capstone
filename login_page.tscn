@@ -30,6 +30,7 @@ offset_top = 207.0
 offset_right = 860.0
 offset_bottom = 238.0
 placeholder_text = "Enter your username..."
+clear_button_enabled = true
 
 [node name="InputPassword" type="LineEdit" parent="."]
 offset_left = 613.0
@@ -38,6 +39,7 @@ offset_right = 860.0
 offset_bottom = 289.0
 placeholder_text = "Enter your password..."
 secret = true
+clear_button_enabled = true
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 515.0
@@ -62,8 +64,19 @@ text = "Login"
 
 [node name="Home" type="Button" parent="."]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 632.0
+offset_top = 369.0
+offset_right = 687.0
+offset_bottom = 400.0
 text = "Home"
 
+[node name="Status" type="Label" parent="."]
+layout_mode = 0
+offset_left = 531.0
+offset_top = 417.0
+offset_right = 783.0
+offset_bottom = 443.0
+text = "Incorrect username or password"
+
+[connection signal="pressed" from="Login" to="." method="_on_login_pressed"]
 [connection signal="pressed" from="Home" to="." method="_on_home_pressed"]

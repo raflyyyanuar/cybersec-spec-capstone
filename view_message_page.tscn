@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dkxfrj842lovt"]
+[gd_scene load_steps=3 format=3 uid="uid://dkxfrj842lovt"]
 
 [ext_resource type="LabelSettings" uid="uid://bfaimiwcnjr7w" path="res://title_label.tres" id="1_3h484"]
+[ext_resource type="Script" path="res://view_message_page.gd" id="1_tg2ke"]
 
 [node name="ViewMessagePage" type="Control"]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_tg2ke")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
