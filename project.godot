@@ -24,8 +24,6 @@ Session="*res://session.gd"
 
 [display]
 
-window/size/viewport_width=1360
-window/size/viewport_height=768
 window/stretch/mode="viewport"
 
 [input]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bbg05k8ulrloo"]
 
-[ext_resource type="LabelSettings" uid="uid://bfaimiwcnjr7w" path="res://title_label.tres" id="1_01wd4"]
 [ext_resource type="Script" path="res://main_page.gd" id="1_te4vx"]
+[ext_resource type="PackedScene" uid="uid://dwhvbtssvep64" path="res://page.tscn" id="2_3wv8t"]
 
 [node name="MainPage" type="Control"]
 layout_mode = 3
@@ -12,18 +12,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_te4vx")
 
-[node name="Label" type="Label" parent="."]
+[node name="Page" parent="." instance=ExtResource("2_3wv8t")]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -612.5
-offset_top = 35.0
-offset_right = 612.5
-offset_bottom = 175.0
-grow_horizontal = 2
-text = "Rafly's Messaging System"
-label_settings = ExtResource("1_01wd4")
+page_name = "Rafly SMS"
 
 [node name="Register" type="Button" parent="."]
 layout_mode = 1
@@ -32,12 +23,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -36.0
-offset_top = -106.0
-offset_right = 36.0
-offset_bottom = -75.0
+offset_left = -51.0
+offset_top = -21.0
+offset_right = 51.0
+offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 24
 text = "Register"
 
 [node name="Login" type="Button" parent="."]
@@ -47,12 +39,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -25.0
-offset_top = -64.0
-offset_right = 25.0
-offset_bottom = -33.0
+offset_left = -35.5
+offset_top = 31.0
+offset_right = 35.5
+offset_bottom = 73.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 24
 text = "Login"
 
 [connection signal="pressed" from="Register" to="." method="_on_register_pressed"]

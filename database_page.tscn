@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmcw5lclxhpig"]
 
-[ext_resource type="LabelSettings" uid="uid://bfaimiwcnjr7w" path="res://title_label.tres" id="1_ek6er"]
 [ext_resource type="Script" path="res://database_page.gd" id="1_ggmln"]
+[ext_resource type="PackedScene" uid="uid://dwhvbtssvep64" path="res://page.tscn" id="2_0acbf"]
 
 [node name="DatabasePage" type="Control"]
 layout_mode = 3
@@ -12,17 +12,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ggmln")
 
-[node name="Label" type="Label" parent="."]
+[node name="Page" parent="." instance=ExtResource("2_0acbf")]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -387.5
-offset_right = 387.5
-offset_bottom = 140.0
-grow_horizontal = 2
-text = "Database Dump"
-label_settings = ExtResource("1_ek6er")
+page_name = "Database Dump"
 
 [node name="DownloadUsers" type="Button" parent="."]
 layout_mode = 0
@@ -41,11 +33,18 @@ offset_bottom = 266.0
 text = "Download credential database"
 
 [node name="Logout" type="Button" parent="."]
-layout_mode = 0
-offset_left = 592.0
-offset_top = 400.0
-offset_right = 671.0
-offset_bottom = 431.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.5
+offset_top = -15.5
+offset_right = 39.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
 text = "LOG OUT"
 
 [connection signal="pressed" from="DownloadUsers" to="." method="_on_download_pressed"]

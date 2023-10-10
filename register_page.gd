@@ -84,5 +84,5 @@ func is_password_good(password : String) -> bool:
 	password_score += check(contains_symbol, password, $SymbolRequirement)
 	password_score += check(has_length_of, password, $LengthRequirement)
 	
-	# return password_score == 4
-	return not password.is_empty()
+	return password_score == 4
+	# return not password.is_empty()
