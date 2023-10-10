@@ -25,6 +25,7 @@ text = "Compose a New Message"
 label_settings = ExtResource("1_ysh0u")
 
 [node name="ToLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = 68.0
 offset_top = 146.0
 offset_right = 108.0
@@ -40,6 +41,7 @@ offset_bottom = 177.0
 max_length = 12
 
 [node name="Label3" type="Label" parent="."]
+layout_mode = 0
 offset_left = 68.0
 offset_top = 197.0
 offset_right = 113.0

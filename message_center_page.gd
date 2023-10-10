@@ -17,7 +17,8 @@ func _ready() -> void:
 
 
 func _on_view_message_button_pressed(message : Array):
-	print(message)
+	Session.message = message
+	get_tree().change_scene_to_file("res://view_message_page.tscn")
 
 
 func _on_compose_pressed() -> void:

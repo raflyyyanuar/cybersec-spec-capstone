@@ -1,7 +1,7 @@
 extends Node
 
 # Credentials dictionary
-var cred_dict = {}
+var cred_dict : Dictionary = {}
 
 # rafly : password, [inbox]
 # inbox -> id, who, what
